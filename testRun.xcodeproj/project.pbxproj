@@ -22,6 +22,7 @@
 		681C828E1D38CF5F007DCF8A /* NSObject+JSONExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 681C82881D38CF5F007DCF8A /* NSObject+JSONExtension.m */; };
 		681C828F1D38CF5F007DCF8A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 681C828A1D38CF5F007DCF8A /* User.m */; };
 		681C82931D38D095007DCF8A /* model.json in Resources */ = {isa = PBXBuildFile; fileRef = 681C82921D38D095007DCF8A /* model.json */; };
+		681C82E11D3CCB0C007DCF8A /* NSArray+YBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 681C82E01D3CCB0C007DCF8A /* NSArray+YBExtension.m */; };
 		68299E131D377877003F7AA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68299E121D377877003F7AA3 /* main.m */; };
 		68299E161D377877003F7AA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68299E151D377877003F7AA3 /* AppDelegate.m */; };
 		68299E191D377877003F7AA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68299E181D377877003F7AA3 /* ViewController.m */; };
@@ -78,6 +79,8 @@
 		681C82891D38CF5F007DCF8A /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		681C828A1D38CF5F007DCF8A /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		681C82921D38D095007DCF8A /* model.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = model.json; sourceTree = "<group>"; };
+		681C82DF1D3CCB0C007DCF8A /* NSArray+YBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YBExtension.h"; sourceTree = "<group>"; };
+		681C82E01D3CCB0C007DCF8A /* NSArray+YBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YBExtension.m"; sourceTree = "<group>"; };
 		68299E0E1D377877003F7AA3 /* testRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68299E121D377877003F7AA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68299E141D377877003F7AA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 			children = (
 				681C82641D38B3E3007DCF8A /* UIImage+YBExtension.h */,
 				681C82651D38B3E3007DCF8A /* UIImage+YBExtension.m */,
+				681C82DF1D3CCB0C007DCF8A /* NSArray+YBExtension.h */,
+				681C82E01D3CCB0C007DCF8A /* NSArray+YBExtension.m */,
 			);
 			path = "方法交换";
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 				681C828D1D38CF5F007DCF8A /* Fish.m in Sources */,
 				681C828C1D38CF5F007DCF8A /* Cat.m in Sources */,
 				681C826E1D38B3F1007DCF8A /* Person.m in Sources */,
+				681C82E11D3CCB0C007DCF8A /* NSArray+YBExtension.m in Sources */,
 				681C828E1D38CF5F007DCF8A /* NSObject+JSONExtension.m in Sources */,
 				681C82661D38B3E3007DCF8A /* UIImage+YBExtension.m in Sources */,
 				681C828F1D38CF5F007DCF8A /* User.m in Sources */,

@@ -18,6 +18,7 @@
 #import "User.h"
 #import "NSObject+JSONExtension.h"
 #import "Book.h"
+#import "NSArray+YBExtension.h"
 
 
 @interface ViewController ()
@@ -50,6 +51,20 @@
     
     //7、用runtime获取所有属性来进行字典转模型
     [self testJsonModel];
+    
+    //8、测试数组越界
+    [self testArray];
+}
+
+
+/**
+ *  8、测试数组越界
+ */
+- (void)testArray
+{
+    NSArray *array = @[@"11",@"22",@"33"];
+    NSString *string = [array objectAtIndex:5];
+    NSLog(@"....%@",string);
 }
 
 
