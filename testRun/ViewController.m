@@ -4,7 +4,6 @@
 //
 //  Created by 王迎博 on 16/7/14.
 //  Copyright © 2016年 王迎博. All rights reserved.
-//  链接：http://www.jianshu.com/p/ab966e8a82e2
 
 #import "ViewController.h"
 #import <objc/runtime.h>
@@ -19,9 +18,14 @@
 #import "NSObject+JSONExtension.h"
 #import "Book.h"
 #import "NSArray+YBExtension.h"
+#import "TableViewController.h"
+#import "DemoObj.h"
+#import "CreateClassVC.h"
 
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *firstBtn;
+@property (weak, nonatomic) IBOutlet UIButton *twelvthBtn;
 
 @end
 
@@ -52,8 +56,92 @@
     //7、用runtime获取所有属性来进行字典转模型
     [self testJsonModel];
     
-    //8、测试数组越界
+    //8、用runtime测试数组越界
     [self testArray];
+    
+    //9、用runtime遍历一个类的所有属性
+    [self getAllPropeties];
+    
+    //10、用runtime测试替换方法
+    [self replaceMethod];
+    
+    //11、用runtime动态挂载对象
+    [self addObject];
+    
+    //12、动态创建类
+    [self objectClass];
+}
+
+
+/**
+ *  12、动态创建类
+ */
+- (void)objectClass
+{
+    SEL tewlveMethod = @selector(createClassVC:);
+    [self.twelvthBtn addTarget:self action:tewlveMethod forControlEvents:UIControlEventTouchUpInside];
+}
+
+
+- (void)createClassVC:(UIButton *)button
+{
+    CreateClassVC *vc = [[CreateClassVC alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+/**
+ *  11、用runtime动态挂载对象
+ */
+static const char associatedKey;
+- (void)addObject
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"我是DemoObj动态挂载的" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    
+    DemoObj *obj = [DemoObj new];
+    objc_setAssociatedObject(obj, &associatedKey, alert, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self getAssociatedObject:obj];
+    });
+}
+
+
+- (void)getAssociatedObject:(DemoObj *)obj {
+    
+    UIAlertView *alert = objc_getAssociatedObject(obj, &associatedKey);
+    [alert show];
+}
+
+
+/**
+ *  10、用runtime测试替换方法
+ */
+- (void)replaceMethod
+{
+    DemoObj *obj = [[DemoObj alloc]init];
+    [obj replaceMethod];
+    [obj eat];
+}
+
+
+/**
+ *  9、用runtime遍历一个类的所有属性
+ */
+- (void)getAllPropeties
+{
+    SEL btnMethod  = @selector(nextPage:);
+    [self.firstBtn addTarget:self action:btnMethod forControlEvents:UIControlEventTouchUpInside];
+}
+
+
+/**
+ *  跳转到下一页展示所有属性
+ */
+- (void)nextPage:(UIButton *)button
+{
+    TableViewController *tabVC = [[TableViewController alloc]init];
+    [self.navigationController pushViewController:tabVC animated:YES];
 }
 
 
@@ -69,7 +157,7 @@
 
 
 /**
- *  用runtime获取所有属性来进行字典转模型
+ *  7、用runtime获取所有属性来进行字典转模型
  */
 - (void)testJsonModel
 {
