@@ -31,6 +31,9 @@
 		68299E211D377877003F7AA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68299E1F1D377877003F7AA3 /* LaunchScreen.storyboard */; };
 		68299E2C1D377877003F7AA3 /* testRunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68299E2B1D377877003F7AA3 /* testRunTests.m */; };
 		68299E371D377877003F7AA3 /* testRunUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68299E361D377877003F7AA3 /* testRunUITests.m */; };
+		68358C351D4F31C4004A57F6 /* testVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68358C341D4F31C4004A57F6 /* testVC.m */; };
+		68358C381D4F355B004A57F6 /* testModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68358C371D4F355B004A57F6 /* testModel.m */; };
+		68358C3D1D4F39BC004A57F6 /* XWTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 68358C3C1D4F39BC004A57F6 /* XWTestObject.m */; };
 		683CCF6B1D470A5800983B9C /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 683CCF691D470A5800983B9C /* TableViewController.m */; };
 		683CCF6F1D47148B00983B9C /* DemoObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 683CCF6E1D47148B00983B9C /* DemoObj.m */; };
 		683CCF731D4718E500983B9C /* CreateClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 683CCF721D4718E500983B9C /* CreateClassVC.m */; };
@@ -107,6 +110,12 @@
 		68299E321D377877003F7AA3 /* testRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68299E361D377877003F7AA3 /* testRunUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testRunUITests.m; sourceTree = "<group>"; };
 		68299E381D377877003F7AA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68358C331D4F31C4004A57F6 /* testVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testVC.h; sourceTree = "<group>"; };
+		68358C341D4F31C4004A57F6 /* testVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testVC.m; sourceTree = "<group>"; };
+		68358C361D4F355B004A57F6 /* testModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testModel.h; sourceTree = "<group>"; };
+		68358C371D4F355B004A57F6 /* testModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testModel.m; sourceTree = "<group>"; };
+		68358C3B1D4F39BC004A57F6 /* XWTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWTestObject.h; sourceTree = "<group>"; };
+		68358C3C1D4F39BC004A57F6 /* XWTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWTestObject.m; sourceTree = "<group>"; };
 		683CCF691D470A5800983B9C /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		683CCF6A1D470A5800983B9C /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		683CCF6D1D47148B00983B9C /* DemoObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoObj.h; sourceTree = "<group>"; };
@@ -302,6 +311,15 @@
 			path = testRunUITests;
 			sourceTree = "<group>";
 		};
+		68358C3A1D4F39B6004A57F6 /* temp */ = {
+			isa = PBXGroup;
+			children = (
+				68358C3B1D4F39BC004A57F6 /* XWTestObject.h */,
+				68358C3C1D4F39BC004A57F6 /* XWTestObject.m */,
+			);
+			path = temp;
+			sourceTree = "<group>";
+		};
 		683CCF681D470A5000983B9C /* 遍历类的属性方法 */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +352,8 @@
 			children = (
 				68DBD0D11D4F1485009D8924 /* UIViewController+YBBlock.h */,
 				68DBD0D21D4F1485009D8924 /* UIViewController+YBBlock.m */,
+				68358C331D4F31C4004A57F6 /* testVC.h */,
+				68358C341D4F31C4004A57F6 /* testVC.m */,
 			);
 			path = "viewController的block回调";
 			sourceTree = "<group>";
@@ -343,6 +363,8 @@
 			children = (
 				68DBD0D51D4F1882009D8924 /* NSObject+YBDescription.h */,
 				68DBD0D61D4F1882009D8924 /* NSObject+YBDescription.m */,
+				68358C361D4F355B004A57F6 /* testModel.h */,
+				68358C371D4F355B004A57F6 /* testModel.m */,
 			);
 			path = "打印model值";
 			sourceTree = "<group>";
@@ -374,6 +396,7 @@
 			children = (
 				68DBD0E71D4F1EEF009D8924 /* NSObject+XWAdd.h */,
 				68DBD0E81D4F1EEF009D8924 /* NSObject+XWAdd.m */,
+				68358C3A1D4F39B6004A57F6 /* temp */,
 			);
 			path = "一键调用通知和KVO";
 			sourceTree = "<group>";
@@ -522,10 +545,12 @@
 				681C82661D38B3E3007DCF8A /* UIImage+YBExtension.m in Sources */,
 				681C828F1D38CF5F007DCF8A /* User.m in Sources */,
 				68DBD0E91D4F1EEF009D8924 /* NSObject+XWAdd.m in Sources */,
+				68358C3D1D4F39BC004A57F6 /* XWTestObject.m in Sources */,
 				683CCF731D4718E500983B9C /* CreateClassVC.m in Sources */,
 				68DBD0E51D4F1CEF009D8924 /* UIAlertView+YBBlock.m in Sources */,
 				681C827E1D38C976007DCF8A /* Dog.m in Sources */,
 				68DBD0D31D4F1485009D8924 /* UIViewController+YBBlock.m in Sources */,
+				68358C381D4F355B004A57F6 /* testModel.m in Sources */,
 				68DBD0D71D4F1882009D8924 /* NSObject+YBDescription.m in Sources */,
 				681C82721D38BC01007DCF8A /* ReviewUserInfo.m in Sources */,
 				681C828B1D38CF5F007DCF8A /* Book.m in Sources */,
@@ -534,6 +559,7 @@
 				681C82781D38C54C007DCF8A /* People.m in Sources */,
 				683CCF6F1D47148B00983B9C /* DemoObj.m in Sources */,
 				68299E161D377877003F7AA3 /* AppDelegate.m in Sources */,
+				68358C351D4F31C4004A57F6 /* testVC.m in Sources */,
 				68299E131D377877003F7AA3 /* main.m in Sources */,
 				68DBD0E11D4F1CA4009D8924 /* NSDictionary+ZXPUnicode.m in Sources */,
 				681C826A1D38B3EA007DCF8A /* NSObject+YBCategory.m in Sources */,

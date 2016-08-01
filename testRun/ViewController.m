@@ -21,11 +21,24 @@
 #import "TableViewController.h"
 #import "DemoObj.h"
 #import "CreateClassVC.h"
+#import "testVC.h"
+#import "UIViewController+YBBlock.h"
+#import "testModel.h"
+#import "UIAlertView+YBBlock.h"
+#import "NSObject+XWAdd.h"
+#import "XWTestObject.h"
 
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UIButton *firstBtn;
 @property (weak, nonatomic) IBOutlet UIButton *twelvthBtn;
+@property (weak, nonatomic) IBOutlet UIButton *thirteenBtn;
+@property (weak, nonatomic) IBOutlet UIButton *fifteen;
+@property (weak, nonatomic) IBOutlet UIButton *seventeenBtn;
+
+
+@property (nonatomic, strong) XWTestObject *objA;
 
 @end
 
@@ -72,18 +85,123 @@
     [self objectClass];
     
     //13、用runtime给viewController的block回调
+    [self testVCBlock];
     
     //14、用runtime利用debugDescription打印model的值
+    [self debugDescriptionModel];
     
     //15、用runtime定义alertView
+    [self testRuntimeAlertView];
     
     //16、用runtime中文打印输出NSArray和NSDictionary的内容
+    [self logArrayDictionary];
     
     //17、一键调用通知和KVO
+    [self testKVO_Notification];
     
+}
+
+
+/**
+ *  17、一键调用通知和KVO
+ */
+- (void)testKVO_Notification
+{
+    _objA = [XWTestObject new];
+    [_objA xw_addObserverBlockForKeyPath:@"name" block:^(id obj, id oldVal, id newVal) {
+        NSLog(@"kvo，修改name为%@", newVal);
+    }];
+    [self xw_addNotificationForName:@"XWTestNotificaton" block:^(NSNotification *notification) {
+        NSLog(@"收到通知1：%@", notification.userInfo);
+    }];
     
+    [self.seventeenBtn addTarget:self action:@selector(testKVO_Notification_Click:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+
+- (void)testKVO_Notification_Click:(UIButton *)btn
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"XWTestNotificaton" object:nil userInfo:@{@"test" : @"1"}];
+    static BOOL flag = NO;
+    if (!flag) {
+        _objA.name = @"wazrx";
+        flag = YES;
+    }else{
+        _objA = nil;//objA 销毁的时候其绑定的KVO会自己移除
+    }
+}
+
+
+/**
+ *  16、用runtime中文打印输出NSArray和NSDictionary的内容
+ */
+- (void)logArrayDictionary
+{
+    NSArray *arr = @[@"test1",@"sssss"];
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"王颖博",@"name", nil];
     
+    NSLog(@"arr:%@",arr);
+    NSLog(@"dic:%@",dic);
+}
+
+
+/**
+ *  15、用runtime定义alertView
+ */
+- (void)testRuntimeAlertView
+{
+    [self.fifteen addTarget:self action:@selector(showRuntimeAlertView) forControlEvents:UIControlEventTouchUpInside];
+}
+
+
+- (void)showRuntimeAlertView
+{
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"show" message:@"傻逼啊" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alertView show];
+    [alertView yb_clickedButtonAtIndexWithBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
+        if (buttonIndex == 0) {
+            NSLog(@"*****%ld",(long)buttonIndex);
+        }else if (buttonIndex == 1)
+        {
+            NSLog(@"*****%ld",(long)buttonIndex);
+        }
+    }];
+}
+
+
+/**
+ *  14、用runtime利用debugDescription打印model的值
+ */
+- (void)debugDescriptionModel
+{
+    testModel *model = [[testModel alloc]init];
+    model.name = @"王颖博";
+    model.age = @"25";
+    NSLog(@"testModel:%@",model);
     
+    /**
+     *  由于直接NSLog的话，会打印model的内存地址，所以为了方便，我们使用了debugDescription，来打印model内容。
+     *  打上断点，然后 po model
+     */
+}
+
+
+/**
+ *  13、用runtime给viewController的block回调
+ */
+- (void)testVCBlock
+{
+    [self.thirteenBtn addTarget:self action:@selector(thirtheenBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+
+- (void)thirtheenBtnClick:(UIButton *)button
+{
+    testVC *vc = [[testVC alloc]init];
+    [vc viewControllerAction:^(UIViewController *vc, NSUInteger type, NSDictionary *dict) {
+        NSLog(@"__%lu",(unsigned long)type);
+    }];
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 
@@ -282,7 +400,7 @@ static const char associatedKey;
 - (void)testInterceptMethod
 {
     //拦截系统的imageNamed方法
-    UIImageView *testImageView = [[UIImageView alloc]initWithFrame:CGRectMake(50, 100, 150, 50)];
+    UIImageView *testImageView = [[UIImageView alloc]initWithFrame:CGRectMake(30, 100, 150, 50)];
     testImageView.image = [UIImage imageNamed:@"test"];
     testImageView.clipsToBounds = YES;
     testImageView.contentMode = UIViewContentModeScaleAspectFill;
