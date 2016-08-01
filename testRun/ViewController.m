@@ -37,7 +37,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *fifteen;
 @property (weak, nonatomic) IBOutlet UIButton *seventeenBtn;
 
-
 @property (nonatomic, strong) XWTestObject *objA;
 
 @end
