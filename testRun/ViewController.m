@@ -68,8 +68,23 @@
     //11、用runtime动态挂载对象
     [self addObject];
     
-    //12、动态创建类
+    //12、用runtime动态创建类
     [self objectClass];
+    
+    //13、用runtime给viewController的block回调
+    
+    //14、用runtime利用debugDescription打印model的值
+    
+    //15、用runtime定义alertView
+    
+    //16、用runtime中文打印输出NSArray和NSDictionary的内容
+    
+    //17、一键调用通知和KVO
+    
+    
+    
+    
+    
 }
 
 
