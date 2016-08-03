@@ -107,20 +107,25 @@
 - (void)testKVO_Notification
 {
     _objA = [XWTestObject new];
+    
+    [self.seventeenBtn addTarget:self action:@selector(testKVO_Notification_Click:) forControlEvents:UIControlEventTouchUpInside];
+    
     [_objA xw_addObserverBlockForKeyPath:@"name" block:^(id obj, id oldVal, id newVal) {
         NSLog(@"kvo，修改name为%@", newVal);
     }];
     [self xw_addNotificationForName:@"XWTestNotificaton" block:^(NSNotification *notification) {
         NSLog(@"收到通知1：%@", notification.userInfo);
     }];
-    
-    [self.seventeenBtn addTarget:self action:@selector(testKVO_Notification_Click:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 
+/**
+ *  注册一个通知
+ */
 - (void)testKVO_Notification_Click:(UIButton *)btn
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"XWTestNotificaton" object:nil userInfo:@{@"test" : @"1"}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"XWTestNotificaton" object:nil userInfo:@{@"test" : @"王颖博"}];
+    
     static BOOL flag = NO;
     if (!flag) {
         _objA.name = @"wazrx";
