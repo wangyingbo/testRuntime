@@ -27,7 +27,14 @@
 #import "UIAlertView+YBBlock.h"
 #import "NSObject+XWAdd.h"
 #import "XWTestObject.h"
+#import "UIViewController+Tracking.h"
+#import "Car.h"
+#import "NSDictionary+Test.h"
+#import "UIControl+Custom.h"
 
+
+#define  FULL_SCREEN_W [UIScreen mainScreen].bounds.size.width
+#define FULL_SCREEN_H [UIScreen mainScreen].bounds.size.height
 
 @interface ViewController ()
 
@@ -98,6 +105,92 @@
     //17、一键调用通知和KVO
     [self testKVO_Notification];
     
+    //18、Method Swizzling的各种姿势
+    //参见 UIViewController+Tracking.h
+    
+    //19、在不同类之间实现Method Swizzling
+    [self testMethodSwizzling];
+    
+    //20、实现类方法的Method Swizzling
+    [self testCategoryMethodSwizzling];
+    
+    //21、在类簇中如何实现Method Swizzling
+    [self test21];
+    
+    //22、解决同一个button重复点击事件
+    [self testSameButtonClick];
+}
+
+
+/**
+ *  22、解决同一个button重复点击事件
+ */
+- (void)testSameButtonClick
+{
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(FULL_SCREEN_W*2/3, FULL_SCREEN_H*1/2, 120, 50)];
+    [button setTitle:@"12_testFunc12" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(func22) forControlEvents:UIControlEventTouchUpInside];
+    button.custom_acceptEventInterval = 2.0;
+    [self.view addSubview:button];
+}
+
+
+- (void)func22
+{
+    NSLog(@"解决button重复点击");
+}
+
+
+/**
+ *  21、在类簇中如何实现Method Swizzling
+ */
+- (void)test21
+{
+    //NSMutableDictionary的setObject:forKey:方法,让调用这个方法时当参数object或key为空的不会抛出异常
+    NSMutableDictionary *mutDic = [NSMutableDictionary dictionary];
+    [mutDic setObject:@"" forKey:@"test"];
+}
+
+
+/**
+ *  20、实现类方法的Method Swizzling
+ */
+- (void)testCategoryMethodSwizzling
+{
+    //参见NSDictionary+Test.h
+    NSDictionary *dic = [NSDictionary dictionary];
+    NSLog(@"%@",dic);
+    
+}
+
+
+/**
+ *  19、在不同类之间实现Method Swizzling
+ */
+- (void)testMethodSwizzling
+{
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(FULL_SCREEN_W*2/3, FULL_SCREEN_H*1/3, 120, 50)];
+    [button setTitle:@"19_testFunc19" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(func19) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+
+- (void)func19
+{
+    Car *car = [[Car alloc]init];
+    [self.navigationController pushViewController:car animated:YES];
+}
+
+
+/**
+ *  18、Method Swizzling的各种姿势
+ */
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
 }
 
 
