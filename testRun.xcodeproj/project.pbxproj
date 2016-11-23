@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680305A01DDC3B3500638B48 /* UIViewController+Example.m in Sources */ = {isa = PBXBuildFile; fileRef = 6803059D1DDC3B3500638B48 /* UIViewController+Example.m */; };
+		680305A11DDC3B3500638B48 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 6803059F1DDC3B3500638B48 /* UIViewController+Swizzling.m */; };
+		680679091DE53F6B008EE2FD /* NSObject+YBSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 680679081DE53F6B008EE2FD /* NSObject+YBSwizzling.m */; };
+		6806790C1DE53FCD008EE2FD /* UIViewController+YBSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 6806790B1DE53FCD008EE2FD /* UIViewController+YBSwizzling.m */; };
+		6806790F1DE5402E008EE2FD /* NSMutableArray+YBSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 6806790E1DE5402E008EE2FD /* NSMutableArray+YBSwizzling.m */; };
+		680679121DE5407A008EE2FD /* UIButton+YBSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 680679111DE5407A008EE2FD /* UIButton+YBSwizzling.m */; };
+		680679151DE540D5008EE2FD /* UILabel+YBSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 680679141DE540D5008EE2FD /* UILabel+YBSwizzling.m */; };
 		681C825C1D389273007DCF8A /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 681C825A1D389273007DCF8A /* test.png */; };
 		681C825D1D389273007DCF8A /* test_os7.png in Resources */ = {isa = PBXBuildFile; fileRef = 681C825B1D389273007DCF8A /* test_os7.png */; };
 		681C82661D38B3E3007DCF8A /* UIImage+YBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 681C82651D38B3E3007DCF8A /* UIImage+YBExtension.m */; };
@@ -70,6 +77,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6803059C1DDC3B3500638B48 /* UIViewController+Example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Example.h"; sourceTree = "<group>"; };
+		6803059D1DDC3B3500638B48 /* UIViewController+Example.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Example.m"; sourceTree = "<group>"; };
+		6803059E1DDC3B3500638B48 /* UIViewController+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzling.h"; sourceTree = "<group>"; };
+		6803059F1DDC3B3500638B48 /* UIViewController+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzling.m"; sourceTree = "<group>"; };
+		680679071DE53F6B008EE2FD /* NSObject+YBSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YBSwizzling.h"; sourceTree = "<group>"; };
+		680679081DE53F6B008EE2FD /* NSObject+YBSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YBSwizzling.m"; sourceTree = "<group>"; };
+		6806790A1DE53FCD008EE2FD /* UIViewController+YBSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YBSwizzling.h"; sourceTree = "<group>"; };
+		6806790B1DE53FCD008EE2FD /* UIViewController+YBSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YBSwizzling.m"; sourceTree = "<group>"; };
+		6806790D1DE5402E008EE2FD /* NSMutableArray+YBSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+YBSwizzling.h"; sourceTree = "<group>"; };
+		6806790E1DE5402E008EE2FD /* NSMutableArray+YBSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+YBSwizzling.m"; sourceTree = "<group>"; };
+		680679101DE5407A008EE2FD /* UIButton+YBSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YBSwizzling.h"; sourceTree = "<group>"; };
+		680679111DE5407A008EE2FD /* UIButton+YBSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YBSwizzling.m"; sourceTree = "<group>"; };
+		680679131DE540D5008EE2FD /* UILabel+YBSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YBSwizzling.h"; sourceTree = "<group>"; };
+		680679141DE540D5008EE2FD /* UILabel+YBSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YBSwizzling.m"; sourceTree = "<group>"; };
 		681C825A1D389273007DCF8A /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		681C825B1D389273007DCF8A /* test_os7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_os7.png; sourceTree = "<group>"; };
 		681C82641D38B3E3007DCF8A /* UIImage+YBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YBExtension.h"; sourceTree = "<group>"; };
@@ -181,9 +202,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		680679061DE53F4F008EE2FD /* 封装 */ = {
+			isa = PBXGroup;
+			children = (
+				680679071DE53F6B008EE2FD /* NSObject+YBSwizzling.h */,
+				680679081DE53F6B008EE2FD /* NSObject+YBSwizzling.m */,
+				6806790A1DE53FCD008EE2FD /* UIViewController+YBSwizzling.h */,
+				6806790B1DE53FCD008EE2FD /* UIViewController+YBSwizzling.m */,
+				6806790D1DE5402E008EE2FD /* NSMutableArray+YBSwizzling.h */,
+				6806790E1DE5402E008EE2FD /* NSMutableArray+YBSwizzling.m */,
+				680679101DE5407A008EE2FD /* UIButton+YBSwizzling.h */,
+				680679111DE5407A008EE2FD /* UIButton+YBSwizzling.m */,
+				680679131DE540D5008EE2FD /* UILabel+YBSwizzling.h */,
+				680679141DE540D5008EE2FD /* UILabel+YBSwizzling.m */,
+			);
+			path = "封装";
+			sourceTree = "<group>";
+		};
 		681C824B1D388E43007DCF8A /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				680679061DE53F4F008EE2FD /* 封装 */,
 				68A7FD251D73E7A000F3488D /* 多次点击相同button重复事件 */,
 				68A7FD0F1D73D9BE00F3488D /* MethodSwizzling各种姿势 */,
 				68DBD0E61D4F1EE6009D8924 /* 一键调用通知和KVO */,
@@ -370,6 +409,10 @@
 		68A7FD0F1D73D9BE00F3488D /* MethodSwizzling各种姿势 */ = {
 			isa = PBXGroup;
 			children = (
+				6803059C1DDC3B3500638B48 /* UIViewController+Example.h */,
+				6803059D1DDC3B3500638B48 /* UIViewController+Example.m */,
+				6803059E1DDC3B3500638B48 /* UIViewController+Swizzling.h */,
+				6803059F1DDC3B3500638B48 /* UIViewController+Swizzling.m */,
 				68A7FD101D73D9E500F3488D /* UIViewController+Tracking.h */,
 				68A7FD111D73D9E500F3488D /* UIViewController+Tracking.m */,
 				68A7FD191D73E01300F3488D /* Car.h */,
@@ -580,6 +623,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680679091DE53F6B008EE2FD /* NSObject+YBSwizzling.m in Sources */,
 				681C828D1D38CF5F007DCF8A /* Fish.m in Sources */,
 				681C828C1D38CF5F007DCF8A /* Cat.m in Sources */,
 				68A7FD241D73E50100F3488D /* MySafeDictionary.m in Sources */,
@@ -589,15 +633,19 @@
 				68A7FD121D73D9E500F3488D /* UIViewController+Tracking.m in Sources */,
 				68DBD0E01D4F1CA4009D8924 /* NSArray+ ZXPUnicode.m in Sources */,
 				681C82E11D3CCB0C007DCF8A /* NSArray+YBExtension.m in Sources */,
+				680305A01DDC3B3500638B48 /* UIViewController+Example.m in Sources */,
 				681C828E1D38CF5F007DCF8A /* NSObject+JSONExtension.m in Sources */,
+				680305A11DDC3B3500638B48 /* UIViewController+Swizzling.m in Sources */,
 				681C82661D38B3E3007DCF8A /* UIImage+YBExtension.m in Sources */,
 				681C828F1D38CF5F007DCF8A /* User.m in Sources */,
 				68DBD0E91D4F1EEF009D8924 /* NSObject+XWAdd.m in Sources */,
+				6806790F1DE5402E008EE2FD /* NSMutableArray+YBSwizzling.m in Sources */,
 				68358C3D1D4F39BC004A57F6 /* XWTestObject.m in Sources */,
 				683CCF731D4718E500983B9C /* CreateClassVC.m in Sources */,
 				68DBD0E51D4F1CEF009D8924 /* UIAlertView+YBBlock.m in Sources */,
 				681C827E1D38C976007DCF8A /* Dog.m in Sources */,
 				68DBD0D31D4F1485009D8924 /* UIViewController+YBBlock.m in Sources */,
+				680679121DE5407A008EE2FD /* UIButton+YBSwizzling.m in Sources */,
 				68358C381D4F355B004A57F6 /* testModel.m in Sources */,
 				68DBD0D71D4F1882009D8924 /* NSObject+YBDescription.m in Sources */,
 				681C82721D38BC01007DCF8A /* ReviewUserInfo.m in Sources */,
@@ -606,6 +654,8 @@
 				68299E191D377877003F7AA3 /* ViewController.m in Sources */,
 				68A7FD1B1D73E01300F3488D /* Car.m in Sources */,
 				68A7FD281D73E7C300F3488D /* UIControl+Custom.m in Sources */,
+				680679151DE540D5008EE2FD /* UILabel+YBSwizzling.m in Sources */,
+				6806790C1DE53FCD008EE2FD /* UIViewController+YBSwizzling.m in Sources */,
 				681C82751D38C37C007DCF8A /* NSObject+YBExtension.m in Sources */,
 				681C82781D38C54C007DCF8A /* People.m in Sources */,
 				683CCF6F1D47148B00983B9C /* DemoObj.m in Sources */,
