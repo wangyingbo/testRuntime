@@ -34,7 +34,7 @@
 - (void)safe_setObject:(id)anObject forKey:(id<NSCopying>)aKey {
     if (anObject && aKey) {
         [self safe_setObject:anObject forKey:aKey];
-        NSLog(@"更新了方法");
+        //NSLog(@"更新了方法");
     }
     else if (aKey) {
         [(NSMutableDictionary *)self removeObjectForKey:aKey];

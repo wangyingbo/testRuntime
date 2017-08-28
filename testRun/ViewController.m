@@ -31,6 +31,8 @@
 #import "Car.h"
 #import "NSDictionary+Test.h"
 #import "UIControl+Custom.h"
+#import "NSObject+YBProperty.h"
+
 
 
 #define  FULL_SCREEN_W [UIScreen mainScreen].bounds.size.width
@@ -119,8 +121,58 @@
     
     //22、解决同一个button重复点击事件
     [self testSameButtonClick];
+    
+    //23、一行代码生成模型所有属性
+    [self autoGetProperty];
 }
 
+/**
+ *  23、一行代码生成模型所有属性
+ */
+- (void)autoGetProperty
+{
+    // 1.定义一个字典
+    NSDictionary *dict = @{
+                           @"statuses" : @[
+                                   @{
+                                       @"text" : @"今天天气真不错！",
+                                       
+                                       @"user" : @{
+                                               @"name" : @"Rose",
+                                               @"icon" : @"nami.png"
+                                               }
+                                       },
+                                   
+                                   @{
+                                       @"text" : @"明天去旅游了",
+                                       
+                                       @"user" : @{
+                                               @"name" : @"Jack",
+                                               @"icon" : @"lufy.png"
+                                               }
+                                       }
+                                   ],
+                           
+                           @"ads" : @[
+                                   @{
+                                       @"image" : @"ad01.png",
+                                       @"url" : @"http://www.小码哥ad01.com"
+                                       },
+                                   @{
+                                       @"image" : @"ad02.png",
+                                       @"url" : @"http://www.小码哥ad02.com"
+                                       }
+                                   ],
+                           
+                           @"totalNumber" : @"2014",
+                           @"previousCursor" : @"13476589",
+                           @"nextCursor" : @"13476599"
+                           };
+    
+    //log出来的可以直接复制
+    [NSObject propertyCodeWithDictionary:dict];
+    
+}
 
 /**
  *  22、解决同一个button重复点击事件
