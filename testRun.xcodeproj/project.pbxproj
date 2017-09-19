@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03ADF3541F569B0A00611292 /* NSObject+Associated.m in Sources */ = {isa = PBXBuildFile; fileRef = 03ADF3521F569B0A00611292 /* NSObject+Associated.m */; };
 		03AF729E1F53C53200F89D7F /* CAAnimation+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AF6FA21F53C53100F89D7F /* CAAnimation+TFEasyCoder.m */; };
 		03AF729F1F53C53200F89D7F /* CAAnimationGroup+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AF6FA41F53C53100F89D7F /* CAAnimationGroup+TFEasyCoder.m */; };
 		03AF72A01F53C53200F89D7F /* CABasicAnimation+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AF6FA61F53C53100F89D7F /* CABasicAnimation+TFEasyCoder.m */; };
@@ -384,6 +385,7 @@
 		03AF74141F53C53300F89D7F /* UIWebView+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AF729B1F53C53200F89D7F /* UIWebView+TFEasyCoder.m */; };
 		03AF74151F53C53300F89D7F /* UIWindow+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AF729D1F53C53200F89D7F /* UIWindow+TFEasyCoder.m */; };
 		03AF74191F53C5D000F89D7F /* NSObject+YBProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AF74181F53C5D000F89D7F /* NSObject+YBProperty.m */; };
+		03DE34481F71236200D5CF50 /* UIButton+YBEventInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DE34471F71236200D5CF50 /* UIButton+YBEventInterval.m */; };
 		680305A01DDC3B3500638B48 /* UIViewController+Example.m in Sources */ = {isa = PBXBuildFile; fileRef = 6803059D1DDC3B3500638B48 /* UIViewController+Example.m */; };
 		680305A11DDC3B3500638B48 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 6803059F1DDC3B3500638B48 /* UIViewController+Swizzling.m */; };
 		680679091DE53F6B008EE2FD /* NSObject+YBSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 680679081DE53F6B008EE2FD /* NSObject+YBSwizzling.m */; };
@@ -454,6 +456,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03ADF3511F569B0A00611292 /* NSObject+Associated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Associated.h"; sourceTree = "<group>"; };
+		03ADF3521F569B0A00611292 /* NSObject+Associated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Associated.m"; sourceTree = "<group>"; };
+		03ADF3531F569B0A00611292 /* YBAssociatedHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBAssociatedHeader.h; sourceTree = "<group>"; };
 		03AF6FA11F53C53100F89D7F /* CAAnimation+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+TFEasyCoder.h"; sourceTree = "<group>"; };
 		03AF6FA21F53C53100F89D7F /* CAAnimation+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+TFEasyCoder.m"; sourceTree = "<group>"; };
 		03AF6FA31F53C53100F89D7F /* CAAnimationGroup+TFEasyCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimationGroup+TFEasyCoder.h"; sourceTree = "<group>"; };
@@ -1218,6 +1223,8 @@
 		03AF729D1F53C53200F89D7F /* UIWindow+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TFEasyCoder.m"; sourceTree = "<group>"; };
 		03AF74171F53C5D000F89D7F /* NSObject+YBProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YBProperty.h"; sourceTree = "<group>"; };
 		03AF74181F53C5D000F89D7F /* NSObject+YBProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YBProperty.m"; sourceTree = "<group>"; };
+		03DE34461F71236200D5CF50 /* UIButton+YBEventInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YBEventInterval.h"; sourceTree = "<group>"; };
+		03DE34471F71236200D5CF50 /* UIButton+YBEventInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YBEventInterval.m"; sourceTree = "<group>"; };
 		6803059C1DDC3B3500638B48 /* UIViewController+Example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Example.h"; sourceTree = "<group>"; };
 		6803059D1DDC3B3500638B48 /* UIViewController+Example.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Example.m"; sourceTree = "<group>"; };
 		6803059E1DDC3B3500638B48 /* UIViewController+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzling.h"; sourceTree = "<group>"; };
@@ -1343,6 +1350,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03ADF34F1F569AF000611292 /* 深层页面间传值和回调 */ = {
+			isa = PBXGroup;
+			children = (
+				03ADF3501F569B0A00611292 /* YBAssociated */,
+			);
+			path = "深层页面间传值和回调";
+			sourceTree = "<group>";
+		};
+		03ADF3501F569B0A00611292 /* YBAssociated */ = {
+			isa = PBXGroup;
+			children = (
+				03ADF3511F569B0A00611292 /* NSObject+Associated.h */,
+				03ADF3521F569B0A00611292 /* NSObject+Associated.m */,
+				03ADF3531F569B0A00611292 /* YBAssociatedHeader.h */,
+			);
+			path = YBAssociated;
+			sourceTree = "<group>";
+		};
 		03AF6F9E1F53C52900F89D7F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -2181,6 +2206,7 @@
 		681C824B1D388E43007DCF8A /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				03ADF34F1F569AF000611292 /* 深层页面间传值和回调 */,
 				03AF74161F53C57E00F89D7F /* 生成模型所有属性 */,
 				680679061DE53F4F008EE2FD /* 封装 */,
 				68A7FD251D73E7A000F3488D /* 多次点击相同button重复事件 */,
@@ -2393,6 +2419,8 @@
 			children = (
 				68A7FD261D73E7C300F3488D /* UIControl+Custom.h */,
 				68A7FD271D73E7C300F3488D /* UIControl+Custom.m */,
+				03DE34461F71236200D5CF50 /* UIButton+YBEventInterval.h */,
+				03DE34471F71236200D5CF50 /* UIButton+YBEventInterval.m */,
 			);
 			path = "多次点击相同button重复事件";
 			sourceTree = "<group>";
@@ -2811,6 +2839,7 @@
 				03AF73831F53C53300F89D7F /* UIButton+TFEasyCoder.m in Sources */,
 				03AF73401F53C53300F89D7F /* NSURLConnection+TFEasyCoder.m in Sources */,
 				03AF73C81F53C53300F89D7F /* UIPinchGestureRecognizer+TFEasyCoder.m in Sources */,
+				03DE34481F71236200D5CF50 /* UIButton+YBEventInterval.m in Sources */,
 				03AF73D41F53C53300F89D7F /* UIPrintInfo+TFEasyCoder.m in Sources */,
 				03AF73EB1F53C53300F89D7F /* UISplitViewController+TFEasyCoder.m in Sources */,
 				03AF73DC1F53C53300F89D7F /* UIRegion+TFEasyCoder.m in Sources */,
@@ -2819,6 +2848,7 @@
 				03AF74061F53C53300F89D7F /* UITextView+TFEasyCoder.m in Sources */,
 				03AF73221F53C53200F89D7F /* NSProcessInfo+TFEasyCoder.m in Sources */,
 				03AF72A11F53C53200F89D7F /* CADisplayLink+TFEasyCoder.m in Sources */,
+				03ADF3541F569B0A00611292 /* NSObject+Associated.m in Sources */,
 				68DBD0D71D4F1882009D8924 /* NSObject+YBDescription.m in Sources */,
 				03AF72C71F53C53200F89D7F /* NSData+TFEasyCoder.m in Sources */,
 				681C82721D38BC01007DCF8A /* ReviewUserInfo.m in Sources */,
