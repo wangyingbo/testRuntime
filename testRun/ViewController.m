@@ -52,6 +52,12 @@
 
 @implementation ViewController
 
+#pragma mark - override
+- (void)dealloc
+{
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -124,6 +130,19 @@
     
     //23、一行代码生成模型所有属性
     [self autoGetProperty];
+    
+    //24、自定义KVO
+    [self customKVO];
+}
+
+#pragma mark - private
+
+/**
+ 自定义KVO
+ */
+- (void)customKVO
+{
+    
 }
 
 /**

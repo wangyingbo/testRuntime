@@ -385,6 +385,7 @@
 		03AF74141F53C53300F89D7F /* UIWebView+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AF729B1F53C53200F89D7F /* UIWebView+TFEasyCoder.m */; };
 		03AF74151F53C53300F89D7F /* UIWindow+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AF729D1F53C53200F89D7F /* UIWindow+TFEasyCoder.m */; };
 		03AF74191F53C5D000F89D7F /* NSObject+YBProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AF74181F53C5D000F89D7F /* NSObject+YBProperty.m */; };
+		03DD2EC51FCD69AC001C1A37 /* NSObject+YBKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DD2EC41FCD69AC001C1A37 /* NSObject+YBKVO.m */; };
 		03DE34481F71236200D5CF50 /* UIButton+YBEventInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DE34471F71236200D5CF50 /* UIButton+YBEventInterval.m */; };
 		680305A01DDC3B3500638B48 /* UIViewController+Example.m in Sources */ = {isa = PBXBuildFile; fileRef = 6803059D1DDC3B3500638B48 /* UIViewController+Example.m */; };
 		680305A11DDC3B3500638B48 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 6803059F1DDC3B3500638B48 /* UIViewController+Swizzling.m */; };
@@ -1223,6 +1224,8 @@
 		03AF729D1F53C53200F89D7F /* UIWindow+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TFEasyCoder.m"; sourceTree = "<group>"; };
 		03AF74171F53C5D000F89D7F /* NSObject+YBProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YBProperty.h"; sourceTree = "<group>"; };
 		03AF74181F53C5D000F89D7F /* NSObject+YBProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YBProperty.m"; sourceTree = "<group>"; };
+		03DD2EC31FCD69AC001C1A37 /* NSObject+YBKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+YBKVO.h"; sourceTree = "<group>"; };
+		03DD2EC41FCD69AC001C1A37 /* NSObject+YBKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YBKVO.m"; sourceTree = "<group>"; };
 		03DE34461F71236200D5CF50 /* UIButton+YBEventInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YBEventInterval.h"; sourceTree = "<group>"; };
 		03DE34471F71236200D5CF50 /* UIButton+YBEventInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YBEventInterval.m"; sourceTree = "<group>"; };
 		6803059C1DDC3B3500638B48 /* UIViewController+Example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Example.h"; sourceTree = "<group>"; };
@@ -2186,6 +2189,15 @@
 			path = "生成模型所有属性";
 			sourceTree = "<group>";
 		};
+		03DD2EC21FCD689B001C1A37 /* 自定义KVO */ = {
+			isa = PBXGroup;
+			children = (
+				03DD2EC31FCD69AC001C1A37 /* NSObject+YBKVO.h */,
+				03DD2EC41FCD69AC001C1A37 /* NSObject+YBKVO.m */,
+			);
+			path = "自定义KVO";
+			sourceTree = "<group>";
+		};
 		680679061DE53F4F008EE2FD /* 封装 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2206,6 +2218,7 @@
 		681C824B1D388E43007DCF8A /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				03DD2EC21FCD689B001C1A37 /* 自定义KVO */,
 				03ADF34F1F569AF000611292 /* 深层页面间传值和回调 */,
 				03AF74161F53C57E00F89D7F /* 生成模型所有属性 */,
 				680679061DE53F4F008EE2FD /* 封装 */,
@@ -2877,6 +2890,7 @@
 				03AF73911F53C53300F89D7F /* UIControl+TFEasyCoder.m in Sources */,
 				03AF73231F53C53200F89D7F /* NSProgress+TFEasyCoder.m in Sources */,
 				03AF73791F53C53300F89D7F /* UIAlertView+TFEasyCoder.m in Sources */,
+				03DD2EC51FCD69AC001C1A37 /* NSObject+YBKVO.m in Sources */,
 				68299E191D377877003F7AA3 /* ViewController.m in Sources */,
 				03AF740B1F53C53300F89D7F /* UIUserNotificationCategory+TFEasyCoder.m in Sources */,
 				03AF73D31F53C53300F89D7F /* UIPrintFormatter+TFEasyCoder.m in Sources */,
